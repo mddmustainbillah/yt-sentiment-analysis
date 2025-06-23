@@ -1,0 +1,10 @@
+artifact_location: /Users/mustainbillah/Desktop/yt-sentiment-analysis/mlruns/966942924428166701/models/m-9502f34a534346d4bdf99435946003ba/artifacts
+creation_timestamp: 1750488122302
+experiment_id: '966942924428166701'
+last_updated_timestamp: 1750488127767
+model_id: m-9502f34a534346d4bdf99435946003ba
+model_type: null
+name: lgbm_model
+source_run_id: b13122b384544339905d89e2d3942e9a
+status: 2
+status_message: null

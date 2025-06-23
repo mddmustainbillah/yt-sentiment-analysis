@@ -1,0 +1,32 @@
+artifact_path: /Users/mustainbillah/Desktop/yt-sentiment-analysis/mlruns/966942924428166701/models/m-ecd3dd7e4c61470faa01fd4772817f53/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.4
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.0
+is_signature_from_type_hint: false
+mlflow_version: 3.1.0
+model_id: m-ecd3dd7e4c61470faa01fd4772817f53
+model_size_bytes: 4280052
+model_uuid: m-ecd3dd7e4c61470faa01fd4772817f53
+prompts: null
+run_id: 9b3540f1f3ba472ca463a921968bafeb
+saved_input_example_info:
+  artifact_path: input_example.json
+  serving_input_path: serving_input_example.json
+  type: ndarray
+signature:
+  inputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1, 10000]}}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-06-21 07:00:55.781657'

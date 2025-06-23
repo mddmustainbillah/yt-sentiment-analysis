@@ -1,0 +1,14 @@
+artifact_uri: /Users/mustainbillah/Desktop/yt-sentiment-analysis/mlruns/966942924428166701/9b3540f1f3ba472ca463a921968bafeb/artifacts
+end_time: 1750489258145
+entry_point_name: ''
+experiment_id: '966942924428166701'
+lifecycle_stage: active
+run_id: 9b3540f1f3ba472ca463a921968bafeb
+run_name: crawling-mole-939
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750489255478
+status: 3
+tags: []
+user_id: mustainbillah

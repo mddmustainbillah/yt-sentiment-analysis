@@ -1,0 +1,14 @@
+artifact_uri: /Users/mustainbillah/Desktop/yt-sentiment-analysis/mlruns/966942924428166701/b13122b384544339905d89e2d3942e9a/artifacts
+end_time: 1750488128803
+entry_point_name: ''
+experiment_id: '966942924428166701'
+lifecycle_stage: active
+run_id: b13122b384544339905d89e2d3942e9a
+run_name: caring-snake-78
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750488121620
+status: 3
+tags: []
+user_id: mustainbillah
