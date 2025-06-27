@@ -34,16 +34,16 @@ stages:
     outs:
     - path: data/interim
       hash: md5
-      md5: a2bbccdc23dd271231099f8d5c99ff87.dir
-      size: 5098055
+      md5: 5527e9d39fb5d2dff00e4c1ea6e043bb.dir
+      size: 5095933
       nfiles: 2
   model_building:
     cmd: python src/model/model_building.py
     deps:
     - path: data/interim/train_processed.csv
       hash: md5
-      md5: 86284f4698366b0f2ee05c211c0e9453
-      size: 4104889
+      md5: dda0bc512b79e45ffac20114f356bdc1
+      size: 4103205
     - path: src/model/model_building.py
       hash: md5
       md5: 9a4cc00245a10b734ccedce855755f8c
@@ -60,46 +60,46 @@ stages:
     outs:
     - path: lgbm_model.pkl
       hash: md5
-      md5: bd5cb98beb51a96622d158e930813de4
-      size: 4119828
+      md5: d34ad86269093c1059d62f0714248aa5
+      size: 4105035
     - path: tfidf_vectorizer.pkl
       hash: md5
-      md5: 3b7b0d04d8e1cb13b7d16f69678085ea
-      size: 384169
+      md5: 545f7351e439b06f87893aed4c504520
+      size: 384148
   model_evaluation:
     cmd: python src/model/model_evaluation.py
     deps:
     - path: data/interim/test_processed.csv
       hash: md5
-      md5: 5b260b8114240fb9c541c0d07b150b14
-      size: 993166
+      md5: 2ae52005e2914f3503f126c5517c049d
+      size: 992728
     - path: data/interim/train_processed.csv
       hash: md5
-      md5: 86284f4698366b0f2ee05c211c0e9453
-      size: 4104889
+      md5: dda0bc512b79e45ffac20114f356bdc1
+      size: 4103205
     - path: lgbm_model.pkl
       hash: md5
-      md5: bd5cb98beb51a96622d158e930813de4
-      size: 4119828
+      md5: d34ad86269093c1059d62f0714248aa5
+      size: 4105035
     - path: src/model/model_evaluation.py
       hash: md5
       md5: c2c34d3bff26277fd82479661ac097d6
       size: 10367
     - path: tfidf_vectorizer.pkl
       hash: md5
-      md5: 3b7b0d04d8e1cb13b7d16f69678085ea
-      size: 384169
+      md5: 545f7351e439b06f87893aed4c504520
+      size: 384148
     outs:
     - path: experiment_info.json
       hash: md5
-      md5: 9892c90d27ce3b87f1d18c273bf01e58
+      md5: c264249fbe9a4001afca9e95d005186a
       size: 84
   model_registration:
     cmd: python src/model/register_model.py
     deps:
     - path: experiment_info.json
       hash: md5
-      md5: 9892c90d27ce3b87f1d18c273bf01e58
+      md5: c264249fbe9a4001afca9e95d005186a
       size: 84
     - path: src/model/register_model.py
       hash: md5
