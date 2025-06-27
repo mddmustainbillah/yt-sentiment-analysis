@@ -1,0 +1,15 @@
+aliases:
+- staging
+creation_timestamp: 1751056723649
+current_stage: None
+description: 'Model trained and registered via DVC pipeline. Run ID: bf181bead47f44279742483b195da1fa'
+last_updated_timestamp: 1751056723663
+name: yt_chrome_plugin_model
+run_id: bf181bead47f44279742483b195da1fa
+run_link: null
+source: /Users/mustainbillah/Desktop/yt-sentiment-analysis/mlruns/966942924428166701/bf181bead47f44279742483b195da1fa/artifacts/lgbm_model
+status: READY
+status_message: null
+storage_location: /Users/mustainbillah/Desktop/yt-sentiment-analysis/mlruns/966942924428166701/bf181bead47f44279742483b195da1fa/artifacts/lgbm_model
+user_id: null
+version: 5
