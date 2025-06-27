@@ -1,4 +1,4 @@
-name: CICD Pipeline (Local)
+name: CICD Pipeline
 on: push
 jobs:
   model-deployment:
@@ -6,12 +6,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.10'
-          
       - name: Cache pip dependencies
         uses: actions/cache@v3
         with:
@@ -19,56 +17,56 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
-            
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          
-      - name: Setup MLflow directory
+      - name: Setup MLflow directory and path
         run: |
+          # Create mlruns directory in current workspace
           mkdir -p mlruns
+          
+          # Create the exact directory structure your code expects
+          sudo mkdir -p /Users/mustainbillah/Desktop/yt-sentiment-analysis
+          
+          # Create symbolic link from expected path to actual mlruns directory
+          sudo ln -s $(pwd)/mlruns /Users/mustainbillah/Desktop/yt-sentiment-analysis/mlruns
+          
+          # Verify the setup worked
+          ls -la /Users/mustainbillah/Desktop/yt-sentiment-analysis/
+          echo "MLflow path setup completed successfully"
           
       - name: Run pipeline
         run: |
           dvc repro
-          
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
       - name: Add changes to Git
         run: |
           git add .
-          
       - name: Commit changes
         if: ${{ github.actor != 'github-actions[bot]' }}
         run: |
           git commit -m "Automated commit of DVC outputs and updated code" || echo "No changes to commit"
-          
       - name: Push changes
         if: ${{ github.actor != 'github-actions[bot]' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git push origin ${{ github.ref_name }}
-          
       - name: Install test dependencies
         run: |
           pip install pytest
-          
       - name: Run model loading test
         run: |
           pytest scripts/test_load_model.py
-          
       - name: Run model signature test
         run: |
           pytest scripts/test_model_signature.py
-          
       - name: Run model performance test
         run: |
           pytest scripts/test_model_performance.py
-          
       - name: Promote model to production
         if: success()
         run: python scripts/promote_model.py
