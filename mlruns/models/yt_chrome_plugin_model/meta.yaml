@@ -1,7 +1,9 @@
 aliases:
-  staging: '4'
+  staging: '5'
 creation_timestamp: 1750488698282
+deployment_job_id: null
+deployment_job_state: null
 description: YouTube Comment Sentiment Analysis Model - LightGBM classifier trained
   on preprocessed comment data with TF-IDF features
-last_updated_timestamp: 1751055660021
+last_updated_timestamp: 1751137993061
 name: yt_chrome_plugin_model
