@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 aliases: []
 creation_timestamp: 1751137992881
 current_stage: None
@@ -14,5 +15,20 @@ source: models:/m-a411334f8e154cf6b2528e0d9c2af012
 status: READY
 status_message: null
 storage_location: /Users/mustainbillah/Desktop/yt-sentiment-analysis/mlruns/966942924428166701/models/m-a411334f8e154cf6b2528e0d9c2af012/artifacts
+=======
+aliases:
+- staging
+creation_timestamp: 1751056723649
+current_stage: None
+description: 'Model trained and registered via DVC pipeline. Run ID: bf181bead47f44279742483b195da1fa'
+last_updated_timestamp: 1751056723663
+name: yt_chrome_plugin_model
+run_id: bf181bead47f44279742483b195da1fa
+run_link: null
+source: /Users/mustainbillah/Desktop/yt-sentiment-analysis/mlruns/966942924428166701/bf181bead47f44279742483b195da1fa/artifacts/lgbm_model
+status: READY
+status_message: null
+storage_location: /Users/mustainbillah/Desktop/yt-sentiment-analysis/mlruns/966942924428166701/bf181bead47f44279742483b195da1fa/artifacts/lgbm_model
+>>>>>>> d706c26e4374cd2947f7abaa077a2693300a9fce
 user_id: null
 version: 5

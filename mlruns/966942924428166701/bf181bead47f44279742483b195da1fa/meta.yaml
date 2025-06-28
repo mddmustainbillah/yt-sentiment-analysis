@@ -1,0 +1,15 @@
+artifact_uri: /Users/mustainbillah/Desktop/yt-sentiment-analysis/mlruns/966942924428166701/bf181bead47f44279742483b195da1fa/artifacts
+end_time: 1751056719194
+entry_point_name: ''
+experiment_id: '966942924428166701'
+lifecycle_stage: active
+run_id: bf181bead47f44279742483b195da1fa
+run_name: receptive-grouse-217
+run_uuid: bf181bead47f44279742483b195da1fa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751056714748
+status: 3
+tags: []
+user_id: runner
